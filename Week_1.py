@@ -17,7 +17,7 @@ c = n - n // 10 * 10
 print(a + b + c)
 
 # Стоимость покупки. Пирожок в столовой стоит A рублей и B копеек.
-# Определите, сколько рублей и копеек нужно заплатить за N пирожков. '''
+# Определите, сколько рублей и копеек нужно заплатить за N пирожков.
 A = int(input())
 B = int(input())
 N = int(input())
@@ -30,3 +30,10 @@ N = int(input())
 M = 60 * 24
 H = (M + N)
 print(H // 60 % 24, H % 60)
+
+# Следующее и предыдущее.'''
+N = int(input())
+NN = N + 1
+PN = N - 1
+print("The next number for the number ", N, " is ", NN, ".", sep="")
+print("The previous number for the number ", N, " is ", PN, ".", sep="")
