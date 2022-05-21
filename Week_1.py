@@ -31,9 +31,14 @@ M = 60 * 24
 H = (M + N)
 print(H // 60 % 24, H % 60)
 
-# Следующее и предыдущее.'''
+# Следующее и предыдущее.
 N = int(input())
 NN = N + 1
 PN = N - 1
 print("The next number for the number ", N, " is ", NN, ".", sep="")
 print("The previous number for the number ", N, " is ", PN, ".", sep="")
+
+# 100 раз подряд в квадрате. Заданное число N записали 100 раз подряд и
+# затем возвели в квадрат. Что получилось?'''
+N = int(input())
+print(int(str(N) * 100) ** 2)
