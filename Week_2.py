@@ -33,3 +33,15 @@ elif x % 400 == 0:
     print('Yes')
 else:
     print('NO')
+
+# Максимум трех чисел. Даны три целых числа. Найдите наибольшее из них
+# (программа должна вывести ровно одно целое число).
+x = int(input())
+y = int(input())
+z = int(input())
+if y <= x >= z:
+    print(x)
+elif x <= y >= z:
+    print(y)
+else:
+    print(z)
