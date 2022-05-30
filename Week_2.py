@@ -57,3 +57,16 @@ if -1 <= a - c <= 1 and -1 <= b - d <= 1:
     print('yes')
 else:
     print('No')
+
+# Цвет клеток шахматной доски. Заданы две клетки шахматной доски. Если они покрашены в один цвет,
+# то выведите слово YES, а если в разные цвета – то NO.
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+if (a + b) % 2 == 0 and (c + d) % 2 == 0:
+    print('Yes')
+elif (a + b + 1) % 2 == 0 and (c + d + 1) % 2 == 0:
+    print('Yes')
+else:
+    print('No')
