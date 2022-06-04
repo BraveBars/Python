@@ -125,3 +125,26 @@ elif n == m or n == k or k == m:
     print(2)
 else:
     print(0)
+
+# 11. Коровы. Программа должна вывести введенное число n и одно из слов: korov, korova или korovy,
+# правильно склоняя слово “korova”. Между числом и словом должен стоять ровно один пробел.
+n = int(input())
+if 10 < n < 20 or 5 <= n % 10 <= 9 or n % 10 == 0:
+    print(n, 'korov')
+elif n % 10 == 1:
+    print(n, 'korova')
+else:
+    print(n, 'korovy')
+
+# В математике функция sign(x) (знак числа) определена так:
+# sign(x)=1, если x>0,
+# sign(x)=-1, если x<0,
+# sign(x)=0, если x=0.
+# Для данного числа x выведите значение sign(x).
+x = int(input())
+if x > 0:
+    print(1)
+elif x < 0:
+    print(-1)
+else:
+    print(0)
