@@ -501,3 +501,25 @@ while n != 0:
     else:
         c = 1
 print(cmax)
+
+# 36. Максимальная длина монотонного фрагмента. Дана последовательность натуральных чисел,
+# завершающаяся числом 0. Определите наибольшую длину монотонного фрагмента последовательности
+# (то есть такого фрагмента, где все элементы либо больше предыдущего, либо меньше).
+now = int(input())
+cPos = cNeg = c = 1
+while now != 0:
+    nPrev = now
+    now = int(input())
+    if now > nPrev and now != 0:
+        cPos += 1
+        cNeg = 1
+        if cPos > c:
+            c = cPos
+    elif now < nPrev and now != 0:
+        cNeg += 1
+        cPos = 1
+        if cNeg > c:
+            c = cNeg
+    elif now == nPrev and now != 0:
+        cNeg = cPos = 1
+print(c)
