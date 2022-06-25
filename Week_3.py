@@ -3,3 +3,13 @@ a, b, c = float(input()), float(input()), float(input())
 p = (a + b + c) / 2
 S = (p * (p - a) * (p - b) * (p - c))**0.5
 print('{0:.6f}'.format(S))
+
+# 2. Сумма ряда. По данному числу n вычислите сумму (1 / 1²)+(1 / 2²)+(1 / 3²)+...+(1 / n²).
+n = float(input())
+c = 1
+b = 0
+while c <= n:
+    a = (1 / c**2)
+    b += a
+    c += 1
+print('{0:.5f}'.format(b))
