@@ -114,3 +114,14 @@ elif d == 0 and a != 0:
     print(1, (-b + math.sqrt(d)) / (2 * a))
 elif a == 0:
     print(1, -c / b)
+
+# 10. Система линейных уравнений - 1. Даны вещественные числа a, b, c, d, e, f. Известно, что система
+# линейных уравнений:
+# ax + by = e
+# cx + dy = f
+# имеет ровно одно решение. Выведите два числа x и y, являющиеся решением этой системы.
+a, b, c = float(input()), float(input()), float(input())
+d, e, f = float(input()), float(input()), float(input())
+x = (d * e - f * b) / (d * a - b * c)
+y = (f * a - e * c) / (d * a - b * c)
+print(x, y)
