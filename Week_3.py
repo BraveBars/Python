@@ -64,3 +64,29 @@ while count < k:
     d = int(per) * p / 100 + int(per)
     per = d
 print(int(per // 100), int(per % 100))
+
+# 8. Квадратное уравнение - 1. Даны действительные коэффициенты a, b, c, при этом a != 0.
+# Решите квадратное уравнение ax²+bx+c=0 и выведите все его корни.
+a, b, c = float(input()), float(input()), float(input()),
+d = b**2 - 4 * a * c
+x = (-b + d**0.5) / (2 * a)
+y = (-b - d**0.5) / (2 * a)
+if d > 0 and x > y:
+    print('{0:.6f}'.format(y), '{0:.6f}'.format(x))    # формат выше не нужен
+if d > 0 and y > x:
+    print('{0:.6f}'.format(x), '{0:.6f}'.format(y))
+if d == 0:
+    print('{0:.6f}'.format(x))
+# похожее решение, но с квадратным корнем
+import math
+a, b, c = float(input()), float(input()), float(input()),
+d = b**2 - 4 * a * c
+if d > 0:
+    x = (-b + math.sqrt(d)) / (2 * a)
+    y = (-b - math.sqrt(d)) / (2 * a)
+if d == 0:
+    print((-b + math.sqrt(d)) / (2 * a))
+elif d > 0 and x > y:
+    print(y, x)
+elif d > 0 and y > x:
+    print(x, y)
