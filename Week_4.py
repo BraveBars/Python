@@ -6,3 +6,6 @@ def min4(a, b, c, d):
     e2 = min(e, c)
     e3 = min(e2, d)
     return e3
+
+a, b, c, d = input(), input(), input(), input()
+print(min4(a, b, c, d))
