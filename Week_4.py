@@ -20,3 +20,18 @@ def distance(x1, y1, x2, y2):
 
 x1, y1, x2, y2 = float(input()), float(input()), float(input()), float(input())
 print(distance(x1, y1, x2, y2))
+
+# 3. Периметр треугольника. Напишите функцию, вычисляющую длину отрезка по координатам его концов.
+# С помощью этой функции напишите программу, вычисляющую периметр треугольника по координатам
+# трех его вершин.
+def perimeter(x1, y1, x2, y2, x3, y3):
+    d = ((x2 - x1)**2 + (y2 - y1) ** 2)**0.5
+    e = ((x3 - x2)**2 + (y3 - y2) ** 2)**0.5
+    f = ((x3 - x1)**2 + (y3 - y1) ** 2)**0.5
+    g = d + e + f
+    return g
+
+
+x1, y1, x2, y2, x3, y3 = int(input()), int(input()), int(input()),\
+                         int(input()), int(input()), int(input())
+print(perimeter(x1, y1, x2, y2, x3, y3))
