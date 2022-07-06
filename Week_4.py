@@ -7,6 +7,7 @@ def min4(a, b, c, d):
     e3 = min(e2, d)
     return e3
 
+
 a, b, c, d = input(), input(), input(), input()
 print(min4(a, b, c, d))
 
@@ -17,6 +18,7 @@ print(min4(a, b, c, d))
 def distance(x1, y1, x2, y2):
     d = ((x2 - x1) ** 2 + (y2 - y1) ** 2)**0.5
     return d
+
 
 x1, y1, x2, y2 = float(input()), float(input()), float(input()), float(input())
 print(distance(x1, y1, x2, y2))
@@ -31,6 +33,7 @@ def perimeter(x1, y1, x2, y2, x3, y3):
     f = ((x3 - x1)**2 + (y3 - y1) ** 2)**0.5
     g = d + e + f
     return g
+
 
 x1, y1, x2, y2, x3, y3 = int(input()), int(input()), int(input()),\
                          int(input()), int(input()), int(input())
@@ -49,6 +52,7 @@ print(perimeter(x1, y1, x2, y2, x3, y3))
 def IsPointInSquare(x, y):
     return abs(x) <= 1 and abs(y) <= 1
 
+
 x, y = float(input()), float(input())
 if IsPointInSquare(x, y):
     print('Yes')
@@ -57,6 +61,7 @@ else:
 # БОЛЕЕ ИНТЕРЕНСЫЙ ВАРИАНТ РЕШЕНИЯ ЗАДАЧИ
 def IsPointInSquare(x, y):
     return x**2 <= 1 and y**2 <= 1
+
 
 a, b = float(input()), float(input())
 print(IsPointInSquare(a, b) * 'YES' + 0**IsPointInSquare(a, b) * 'NO')
@@ -67,6 +72,7 @@ print(IsPointInSquare(a, b) * 'YES' + 0**IsPointInSquare(a, b) * 'NO')
 # квадрату, выведите слово YES,иначе выведите слово NO. На рисунке сетка проведена с шагом 1.
 def IsPointInSquare(x, y):
     return abs(x) + abs(y) <= 1
+
 
 x, y = float(input()), float(input())
 if IsPointInSquare(x, y):
@@ -85,6 +91,7 @@ else:
 # IsPointInCircle не должна содержать инструкцию if.
 def IsPointInCircle(x, y, xc, yc, r):
     return ((x - xc)**2 + (y - yc)**2)**0.5 <= r
+
 
 x, y, xc, yc, r = float(input()), float(input()), \
                   float(input()), float(input()), float(input())
@@ -105,6 +112,7 @@ def xor(x, y):
         return 1
     return 0
 
+
 x, y = int(input()), int(input())
 print(xor(x, y))
 
@@ -123,5 +131,30 @@ def MinDivisor(n):
             return n
     return a
 
+
 n = int(input())
 print(MinDivisor(n))
+
+
+# 9. Проверка числа на простоту. Дано натуральное число n>1. Проверьте, является ли оно простым.
+# Программа должна вывести слово YES, если число простое и NO, если число составное. Решение
+# оформите в виде функции IsPrime(n), которая возвращает True для простых чисел и False для
+# составных чисел. Программа должна иметь сложность O(корень из n): количество действий в программе
+# должно быть пропорционально квадратному корню из n (иначе говоря, при увеличении входного числа
+# в k раз, время выполнения программы должно увеличиваться примерно в корень из k раз).
+def IsPrime(n):
+    a = 2
+    if n == 2:
+        return 1
+    while n % a != 0:
+        a += 1
+        if a > n**0.5:
+            return 1
+    return 0
+
+
+n = int(input())
+if IsPrime(n):
+    print('Yes')
+else:
+    print('No')
