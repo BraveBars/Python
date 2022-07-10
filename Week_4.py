@@ -204,3 +204,31 @@ def power(a, n):
 a = float(input())
 n = int(input())
 print(power(a, n))
+
+
+# 13. Алгоритм Евклида. Для быстрого вычисления наибольшего общего делителя двух чисел используют
+# алгоритм Евклида. Он построен на следующем соотношении: НОД(a,b)=НОД(b,a % b).
+# Реализуйте рекурсивный алгоритм Евклида в виде функции gcd(a, b).
+def gcd(a, b):
+    if a == 0:
+        return b
+    if b == 0:
+        return a
+    if a > b:
+        return gcd(b, a % b)
+    return gcd(a, b % a)
+
+
+a = int(input())
+b = int(input())
+print(gcd(a, b))
+# Более простое решение
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+
+a = int(input())
+b = int(input())
+print(gcd(a, b))
